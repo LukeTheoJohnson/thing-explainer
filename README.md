@@ -14,13 +14,11 @@ book and the [Up Goer Five](https://xkcd.com/1133/) comic do.
 > the same game honestly. The word list, the concept, and all the credit are
 > his. See [Credit & thanks](#credit--thanks).
 
-The twist: the 1,000-word limit is a **hard rule**, not a vibe. A language model
-is hopeless at policing a closed vocabulary on its own: it will happily let
-"system", "energy", or "molecule" slip through. So the rule lives in code. A
+The twist: the 1,000-word limit. A
 small checker reads the text and refuses to pass it until every single word is
 on the allowed list.
 
-It ships three ways: a `thing-explainer` command line tool, an importable
+Three options: a `thing-explainer` command line tool, an importable
 Python library, and a [Claude Code skill](SKILL.md).
 
 ## Install
@@ -46,7 +44,7 @@ FIX: converts, fuel, motion
 (Note that `engine` passes: it really is one of the ten hundred. The list is
 Munroe's actual one, not a guess.)
 
-## Use it as a library
+## library
 
 ```python
 from thing_explainer import check
@@ -69,12 +67,10 @@ done until the script says so.
 
 - Every word must appear in [`wordlist.txt`](src/thing_explainer/wordlist.txt) (~3,600 surface forms:
   the ~1,000 base words plus their plurals and `-ing`/`-ed`/`-er` endings).
-- **FAIL**: a banned word. Must be rewritten. This includes a banned word
-  capitalised at the start of a sentence ("Molecules are small.").
+- **FAIL**: a banned word. Must be rewritten.
 - **WARN**: a capitalised word mid-sentence that isn't on the list. Treated as
   a likely name or place (Jupiter, Anna) and allowed, but surfaced for review.
-- Pure numbers are ignored; spelling them out is a style choice, not a rule.
-- Exit code is `1` if anything FAILs, `0` if clean. So you can drop it into a
+- Exit code is `1` if ir fails, `0` if clean. So you can drop it into a
   loop or a CI gate.
 
 ## Examples
@@ -124,8 +120,7 @@ python -m pytest                 # the full suite
 ## Credit & thanks
 
 Everything good about this idea belongs to **[Randall Munroe](https://xkcd.com/)**:
-cartoonist behind [xkcd](https://xkcd.com/), former NASA roboticist, and the
-person who turned "explain it with small words" from a party trick into a craft.
+cartoonist behind [xkcd](https://xkcd.com/), former NASA roboticist.
 
 - **[*Up Goer Five*](https://xkcd.com/1133/)** (xkcd #1133, 2012): the blueprint
   of the Saturn V rocket, labelled using only the ten hundred most used words.
