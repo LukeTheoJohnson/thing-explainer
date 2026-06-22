@@ -2,7 +2,7 @@
 
 Explain anything using only the **ten hundred** most common English words, the
 way Randall Munroe's [*Thing Explainer*](https://en.wikipedia.org/wiki/Thing_Explainer)
-book and the [Up Goer Five](https://xkcd.com/1133/) comic do. This project provides a lightweight  function for the 1,000-word limit with enforcing loops. A checker reads the text and refuses to pass it until every single word is
+book and the [Up Goer Five](https://xkcd.com/1133/) comic do. This project provides a lightweight function for the 1,000-word limit with enforcing loops. A checker reads the text and refuses to pass it until every single word is
 on the allowed list.
 
 Three options for using it: a `thing-explainer` command line tool, an importable
@@ -31,7 +31,7 @@ FIX: converts, fuel, motion
 (Note that `engine` passes: it really is one of the ten hundred. The list is
 Munroe's actual one, not a guess.)
 
-## library
+## Use it as a library
 
 ```python
 from thing_explainer import check
@@ -57,7 +57,7 @@ done until the script says so.
 - **FAIL**: a banned word. Must be rewritten.
 - **WARN**: a capitalised word mid-sentence that isn't on the list. Treated as
   a likely name or place (Jupiter, Anna) and allowed, but surfaced for review.
-- Exit code is `1` if ir fails, `0` if clean. So you can drop it into a
+- Exit code is `1` if it fails, `0` if clean. So you can drop it into a
   loop or a CI gate.
 
 ## Examples
