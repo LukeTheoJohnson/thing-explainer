@@ -2,23 +2,11 @@
 
 Explain anything using only the **ten hundred** most common English words, the
 way Randall Munroe's [*Thing Explainer*](https://en.wikipedia.org/wiki/Thing_Explainer)
-book and the [Up Goer Five](https://xkcd.com/1133/) comic do.
-
-> **This idea is entirely Randall Munroe's**, and it's a wonderful one. *Thing
-> Explainer* (2015) describes a Saturn V rocket (sorry, the *Up Goer Five*), a
-> dishwasher, and the inside of a nuclear plant using nothing but the thousand
-> most common words, and somehow they come out *clearer*, not dumber. The
-> constraint is the magic: when you can't reach for "thermal regulation" you're
-> forced to actually understand the thing well enough to say "keeping it from
-> getting too hot." This repo just adds a strict referee so a machine can play
-> the same game honestly. The word list, the concept, and all the credit are
-> his. See [Credit & thanks](#credit--thanks).
-
-The twist: the 1,000-word limit. A
+book and the [Up Goer Five](https://xkcd.com/1133/) comic do. The twist: the 1,000-word limit. A
 small checker reads the text and refuses to pass it until every single word is
 on the allowed list.
 
-Three options: a `thing-explainer` command line tool, an importable
+Three options for using it: a `thing-explainer` command line tool, an importable
 Python library, and a [Claude Code skill](SKILL.md).
 
 ## Install
