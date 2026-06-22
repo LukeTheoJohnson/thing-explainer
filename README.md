@@ -2,8 +2,7 @@
 
 Explain anything using only the **ten hundred** most common English words, the
 way Randall Munroe's [*Thing Explainer*](https://en.wikipedia.org/wiki/Thing_Explainer)
-book and the [Up Goer Five](https://xkcd.com/1133/) comic do. The twist: the 1,000-word limit. A
-small checker reads the text and refuses to pass it until every single word is
+book and the [Up Goer Five](https://xkcd.com/1133/) comic do. This project provides a lightweight  function for the 1,000-word limit with enforcing loops. A checker reads the text and refuses to pass it until every single word is
 on the allowed list.
 
 Three options for using it: a `thing-explainer` command line tool, an importable
