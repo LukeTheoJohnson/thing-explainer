@@ -108,6 +108,15 @@ def main() -> int:
     ap.add_argument("--quiet", action="store_true", help="exit code only, no report")
     args = ap.parse_args()
 
+    # Windows consoles default to cp1252, but checked text routinely contains
+    # em dashes, smart quotes, and arrows. Keep our own report from crashing
+    # with a UnicodeEncodeError when a context line carries one of those.
+    for stream in (sys.stdout, sys.stderr):
+        try:
+            stream.reconfigure(encoding="utf-8")
+        except (AttributeError, ValueError):
+            pass
+
     if args.file:
         p = Path(args.file)
         if not p.exists():

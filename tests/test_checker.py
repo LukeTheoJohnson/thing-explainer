@@ -245,3 +245,24 @@ def test_cli_quiet_suppresses_report_but_keeps_exit_code():
 def test_cli_missing_file_exits_two():
     r = run_cli(["does_not_exist_12345.txt"])
     assert r.returncode == 2
+
+
+def test_cli_non_ascii_context_does_not_crash(tmp_path):
+    # The checker reads UTF-8, but Windows stdout defaults to cp1252. A context
+    # line carrying a char outside cp1252 (here U+2192 '→') must not blow up the
+    # report with a UnicodeEncodeError -- output is forced to UTF-8. A crash and
+    # a clean FAIL both exit 1, so the real guard is: no traceback, report runs
+    # to completion (FIX printed), and the arrow survives in the output.
+    f = tmp_path / "arrow.txt"
+    f.write_text("draft → zorp here", encoding="utf-8")
+    r = subprocess.run(
+        [sys.executable, "-m", "thing_explainer.checker", str(f)],
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+    )
+    assert r.returncode == 1
+    assert "Traceback" not in r.stderr
+    assert "zorp" in r.stdout
+    assert "FIX:" in r.stdout
+    assert "→" in r.stdout
