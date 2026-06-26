@@ -1,14 +1,20 @@
 # thing-explainer
 
+You don't want a dumb explanation, just the simple version
+
 Explain anything using only the **ten hundred** most common English words, the
 way Randall Munroe's [*Thing Explainer*](https://en.wikipedia.org/wiki/Thing_Explainer)
-book and the [Up Goer Five](https://xkcd.com/1133/) comic do. This project provides a lightweight function for the 1,000-word limit with enforcing loops. A checker reads the text and refuses to pass it until every single word is
+book does. This project provides a lightweight function for the 1,000-word limit with enforcing loops. A checker reads the text and refuses to pass it until every single word is
 on the allowed list.
+
+# Why?
+
+I've often found myself trying to capture this **ten hundred** concept when asking for explanations or learning new concepts. People refer to this idea sometimes as "Explain like I'm five" but there's a balance between getting the 80:20 rule right and explaining the core without jargon or frills, and genuinely oversimplyiifying. 
+
+## Install
 
 Three options for using it: a `thing-explainer` command line tool, an importable
 Python library, and a [Claude Code skill](SKILL.md).
-
-## Install
 
 ```bash
 pip install thing-explainer
