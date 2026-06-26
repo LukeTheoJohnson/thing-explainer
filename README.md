@@ -2,23 +2,31 @@
 
 You don't want an answer that makes you feel small. You want the easy, true one.
 
-This is a small thing on your computer that reads what you write. Every word you write has to be one of
-the ten hundred words that people use most. If you use a big word, it stops and shows you which word to change. It
-will not tell you that you are done until every word is one of the ten hundred.
+This is a small thing on your computer that reads what you write. Every word you
+write has to be one of the ten hundred words that people use most. If you use a
+big word, it stops and points at the word to change. It will not tell you that
+you are done until every word is one of the ten hundred.
 
-*(Every word in the lines above is one of the ten hundred — the README passes
-its own checker.)* It is the same game as Randall Munroe's
-[*Thing Explainer*](https://en.wikipedia.org/wiki/Thing_Explainer) book, with a
-strict referee so a machine can play it honestly.
+*(Every word up to here is one of the ten hundred — these first lines pass their
+own check.)* It is the same game as Randall Munroe's
+[*Thing Explainer*](https://en.wikipedia.org/wiki/Thing_Explainer) book, but with
+a hard law so a machine can play it for real.
 
 ## Why?
 
-I really like this ten hundred words idea. When I am trying to learn something new myself, or tell others. There is a fine line to walk. You can say the heart of the thing with no big hard words. On the other side, you can cut away so much it is not quite true any more. I like to push myself to say things in an easy way, even in fields full of deep, hard ideas. I would push other people to do the same: start as easy as you can, and only add the hard parts when they really do help you see the thing more clearly. When you want to say something hard, and you find an easy way to say it: you really know the thing.
+I really like this ten hundred words idea. When I am trying to learn something new
+myself, or tell others. There is a fine line to walk. You can say the heart of the
+thing with no big hard words. On the other side, you can cut away so much it is not
+quite true any more. I like to push myself to say things in an easy way, even in
+fields full of deep, hard ideas. I would push other people to do the same: start
+as easy as you can, and only add the hard parts when they really do help you see
+the thing more clearly. When you want to say something hard, and you find an easy
+way to say it: you really know the thing.
 
-## Install
+## Get it
 
-Three options for using it: a `thing-explainer` command line tool, an importable
-Python library, and a [Claude Code skill](SKILL.md).
+Three ways to use it: a `thing-explainer` you run by name, a part you can pull
+into your own Python, and [a way to use it in Claude Code](SKILL.md).
 
 ```bash
 pip install thing-explainer
@@ -38,10 +46,10 @@ echo "The engine converts fuel into motion." | thing-explainer
 FIX: converts, fuel, motion
 ```
 
-(Note that `engine` passes: it really is one of the ten hundred. The list is
-Munroe's actual one, not a guess.)
+(See how `engine` is fine: it really is one of the ten hundred. The words come
+from Munroe's own set, not made up.)
 
-## Use it as a library
+## Use it in your own Python
 
 ```python
 from thing_explainer import check
@@ -52,29 +60,34 @@ if fails:
     print("banned:", ", ".join(i["word"] for i in fails))
 ```
 
-Each issue is a dict: `{"kind", "word", "line", "col", "context"}`, where
-`kind` is `FAIL` (banned word) or `WARN` (likely a name). Pass your own word set
-as the second argument to check against a different vocabulary.
+Each word it stops on comes back with a few parts:
+`{"kind", "word", "line", "col", "context"}`. `kind` is `FAIL` (a word you can
+not use) or `WARN` (looks like a name). You can also give it your own set of
+words to check.
 
-The workflow is a loop: **draft → check → fix only the flagged words → repeat**
-until the checker prints `PASS` and exits `0`. You are not allowed to call it
-done until the script says so.
+The way to work goes round and round: write, check, change only the words it
+points at, then go again, until it says `PASS` and gives back `0`. You are not
+allowed to say you are done until it says so.
 
-## How the rule is enforced
+## How it keeps the law
 
-- Every word must appear in [`wordlist.txt`](src/thing_explainer/wordlist.txt) (~3,600 surface forms:
-  the ~1,000 base words plus their plurals and `-ing`/`-ed`/`-er` endings).
-- **FAIL**: a banned word. Must be rewritten.
-- **WARN**: a capitalised word mid-sentence that isn't on the list. Treated as
-  a likely name or place (Jupiter, Anna) and allowed, but surfaced for review.
-- Exit code is `1` if it fails, `0` if clean. So you can drop it into a
-  loop or a CI gate.
+- Every word has to be in [`wordlist.txt`](src/thing_explainer/wordlist.txt)
+  (about 3,600 word forms: the main words and the same words with `-s`, `-ing`,
+  `-ed`, and `-er` on the end).
+- **FAIL**: a word you can not use. You have to change it.
+- **WARN**: a word with a big first letter part way through a line that is not in
+  the ten hundred. It is taken to be a name or a place (Jupiter, Anna) and let
+  through, but still shown to you.
+- It gives back `1` if some word is wrong, `0` if all is well. So you can drop it
+  into a run that goes round and round, or a step that has to pass before the rest
+  of your work can go on.
 
-## Examples
+## A few that pass
 
-All three pass the checker; every word is verified against Munroe's list.
+All three pass; every word in them is one of the ten hundred, checked against
+Munroe's own set.
 
-> **A flying machine** *(a plane; "plane" itself is banned!)*
+> **A flying machine** *(this is a plane; but the word "plane" is not one of the ten hundred!)*
 > A flying machine is a big metal bird that carries people through the sky. It
 > has long flat arms on each side. When it runs fast along the ground, air
 > rushes over those arms and pushes the whole thing up. Once it is high up, it
@@ -98,44 +111,45 @@ All three pass the checker; every word is verified against Munroe's list.
 > lots of drops make the grey clouds you see. When the drops get too big and
 > heavy to stay up, they fall back down on us as rain.
 
-## Files
+## What each part is
 
-| File | What it is |
+| Part | What it is |
 |------|------------|
-| `src/thing_explainer/checker.py` | The checker. Run it; trust its exit code. |
-| `src/thing_explainer/wordlist.txt` | The allowed words. Source of truth. Don't hand-edit. |
-| `src/thing_explainer/words.js` | Raw upstream list from xkcd.com/simplewriter (provenance). |
-| `src/thing_explainer/build_wordlist.py` | Rebuilds `wordlist.txt` from `words.js` if upstream changes. |
-| `tests/test_checker.py` | The test suite locking in every enforcement behaviour. |
-| `SKILL.md` | Claude Code skill: the draft → check → fix loop. |
+| `src/thing_explainer/checker.py` | The part that does the checking. Run it; go by the number it gives back. |
+| `src/thing_explainer/wordlist.txt` | The words you can use. The one true set. Do not change it by hand. |
+| `src/thing_explainer/words.js` | The words as they come from xkcd.com/simplewriter (where they are from). |
+| `src/thing_explainer/build_wordlist.py` | Builds `wordlist.txt` from `words.js` again if the words up there change. |
+| `tests/test_checker.py` | All the checks that lock in how every part of the law works. |
+| `SKILL.md` | How to use it in Claude Code: the write, check, change way of working. |
 
 ```bash
 pip install -e ".[dev]"
-python -m pytest                 # the full suite
+python -m pytest                 # run all the checks
 ```
 
-## Credit & thanks
+## Big thank you
 
-Everything good about this idea belongs to **[Randall Munroe](https://xkcd.com/)**:
-cartoonist behind [xkcd](https://xkcd.com/), former NASA roboticist.
+Everything good here is **[Randall Munroe](https://xkcd.com/)**'s: the man behind
+[xkcd](https://xkcd.com/), who once made machines that move on their own, at NASA.
 
-- **[*Up Goer Five*](https://xkcd.com/1133/)** (xkcd #1133, 2012): the blueprint
-  of the Saturn V rocket, labelled using only the ten hundred most used words.
-  "The only flying space car we sent to another world" and all.
+- **[*Up Goer Five*](https://xkcd.com/1133/)** (xkcd #1133, 2012): the drawing of
+  the Saturn V (a very big space car), with every part named using only the ten
+  hundred most used words. "The only flying space car we sent to another world"
+  and all.
 - **[*Thing Explainer: Complicated Stuff in Simple Words*](https://en.wikipedia.org/wiki/Thing_Explainer)**
-  (Houghton Mifflin Harcourt, 2015). The book that ran with it: the human body,
-  a washing machine, the periodic table (the "pieces everything is made of"),
-  all in the same thousand words.
-- **[Simple Writer](https://xkcd.com/simplewriter/)**: Munroe's own in-browser
-  tool that flags any word outside the list. This project is, more or less, that
-  tool grown a spine: a hard exit code so an automated writing loop can't fib
-  about whether it passed.
+  (Houghton Mifflin Harcourt, 2015). The book that ran with it: the human body, a
+  wash machine, the table of all the bits the world is made of, all in the same
+  ten hundred words.
+- **[Simple Writer](https://xkcd.com/simplewriter/)**: Munroe's own little thing,
+  in your computer, that points out any word not in the ten hundred. This one is
+  more or less that same thing but harder: it gives a hard number back, so a run
+  that writes can not say it passed when it did not.
 
-If you enjoy this, **buy the book**. It's beautiful, and it's the real thing.
+If you like this, **buy the book**. It is beautiful, and it is the real thing.
 
-**On the word list:** [`wordlist.txt`](src/thing_explainer/wordlist.txt) is built
-from [`words.js`](src/thing_explainer/words.js), the exact vocabulary shipped with
-xkcd's Simple Writer. That list is Munroe's work, not mine, and is included here
-only to make the checker runnable; see [LICENSE](LICENSE) for the provenance
-note. The code in this repo is MIT; the word list's terms are Munroe's. Please
-keep this credit intact in anything you build on top of it.
+**About the words:** [`wordlist.txt`](src/thing_explainer/wordlist.txt) is made
+from [`words.js`](src/thing_explainer/words.js), the very same words that come
+with xkcd's Simple Writer. That set is Munroe's work, not mine, and is here only
+to make the thing run; see [LICENSE](LICENSE) for the note on where it is from.
+What I wrote here is MIT; the words in the set are Munroe's to give. Please keep
+this thank you in anything you build on top of it.
