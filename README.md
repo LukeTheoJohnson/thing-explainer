@@ -2,13 +2,9 @@
 
 You don't want an answer that makes you feel small. You want the easy, true one.
 
-This is a small thing on your computer that reads what you write. It knows the
-ten hundred words that people use most. Every word you write has to be one of
-those. If you use a big word, it stops and shows you which word to change. It
+This is a small thing on your computer that reads what you write. Every word you write has to be one of
+the ten hundred words that people use most. If you use a big word, it stops and shows you which word to change. It
 will not tell you that you are done until every word is one of the ten hundred.
-You can not talk your way past it. So when you want to say something hard, you
-have to find a small, easy way to say it, and that makes you really know the
-thing.
 
 *(Every word in the lines above is one of the ten hundred — the README passes
 its own checker.)* It is the same game as Randall Munroe's
@@ -17,7 +13,7 @@ strict referee so a machine can play it honestly.
 
 ## Why?
 
-I've often found myself trying to capture this **ten hundred** concept when asking for explanations or learning new concepts. People refer to this idea sometimes as "Explain like I'm five" but there's a balance between getting the 80:20 rule right and explaining the core without jargon or frills, and genuinely oversimplifying.
+I really like this ten hundred words idea. When I am trying to learn something new myself, or tell others. There is a fine line to walk. You can say the heart of the thing with no big hard words. On the other side, you can cut away so much it is not quite true any more. I like to push myself to say things in an easy way, even in fields full of deep, hard ideas. I would push other people to do the same: start as easy as you can, and only add the hard parts when they really do help you see the thing more clearly. When you want to say something hard, and you find an easy way to say it: you really know the thing.
 
 ## Install
 
