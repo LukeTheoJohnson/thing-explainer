@@ -1,15 +1,23 @@
 # thing-explainer
 
-You don't want a dumb explanation, just the simple version
+You don't want an answer that makes you feel small. You want the easy, true one.
 
-Explain anything using only the **ten hundred** most common English words, the
-way Randall Munroe's [*Thing Explainer*](https://en.wikipedia.org/wiki/Thing_Explainer)
-book does. This project provides a lightweight function for the 1,000-word limit with enforcing loops. A checker reads the text and refuses to pass it until every single word is
-on the allowed list.
+This is a small thing on your computer that reads what you write. It knows the
+ten hundred words that people use most. Every word you write has to be one of
+those. If you use a big word, it stops and shows you which word to change. It
+will not tell you that you are done until every word is one of the ten hundred.
+You can not talk your way past it. So when you want to say something hard, you
+have to find a small, easy way to say it, and that makes you really know the
+thing.
 
-# Why?
+*(Every word in the lines above is one of the ten hundred — the README passes
+its own checker.)* It is the same game as Randall Munroe's
+[*Thing Explainer*](https://en.wikipedia.org/wiki/Thing_Explainer) book, with a
+strict referee so a machine can play it honestly.
 
-I've often found myself trying to capture this **ten hundred** concept when asking for explanations or learning new concepts. People refer to this idea sometimes as "Explain like I'm five" but there's a balance between getting the 80:20 rule right and explaining the core without jargon or frills, and genuinely oversimplyiifying. 
+## Why?
+
+I've often found myself trying to capture this **ten hundred** concept when asking for explanations or learning new concepts. People refer to this idea sometimes as "Explain like I'm five" but there's a balance between getting the 80:20 rule right and explaining the core without jargon or frills, and genuinely oversimplifying.
 
 ## Install
 
