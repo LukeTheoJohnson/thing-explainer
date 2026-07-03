@@ -145,11 +145,9 @@ Everything good here is **[Randall Munroe](https://xkcd.com/)**'s: the man behin
   more or less that same thing but harder: it gives a hard number back, so a run
   that writes can not say it passed when it did not.
 
-If you like this, **buy the book**. It is beautiful, and it is the real thing.
+If you like this, **buy the book**.
 
 **About the words:** [`wordlist.txt`](src/thing_explainer/wordlist.txt) is made
 from [`words.js`](src/thing_explainer/words.js), the very same words that come
 with xkcd's Simple Writer. That set is Munroe's work, not mine, and is here only
-to make the thing run; see [LICENSE](LICENSE) for the note on where it is from.
-What I wrote here is MIT; the words in the set are Munroe's to give. Please keep
-this thank you in anything you build on top of it.
+to make the thing run; see [LICENSE](LICENSE) 
