@@ -15,13 +15,13 @@ a hard law so a machine can play it.
 I really like this ten hundred words idea. When I am trying to learn something new
 myself, or tell it to others. I find there is a fine line to walk. You have to say the heart of the
 thing with no big hard words. On the other side, you can cut away so much it is not
-quite true any more. 
+quite true any more. Sometimes the big words are the best words.
 
 I push myself to say things in an easy way in
 fields full of deep, hard ideas. Start
 as easy as you can, and only add the hard parts when they help you see
 the thing clearly. When you want to say something hard, and you find an easy
-way to say it: I'd day you know the thing.
+way to say it: I'd say you know the thing.
 
 ## Get it
 
