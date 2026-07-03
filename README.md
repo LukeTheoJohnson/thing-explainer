@@ -3,25 +3,26 @@
 You don't want an answer that makes you feel small. You want the easy, true one.
 
 This work is a small thing on your computer that reads what you write. Every word you
-write has to be one of the ten hundred words that people use most. If you use a
-big word, it stops and points at the word to change. It will not tell you that
-you are done until every word is one of the ten hundred.
+write has to be one of the ten hundred words that all people use most. If you use a
+big word it points at the word to change. You are not done until every word is one of the ten hundred.
 
 *(Every word up to here is one of the ten hundred — these first lines pass their
 own check.)* It is the same game as Randall Munroe's
 [*Thing Explainer*](https://en.wikipedia.org/wiki/Thing_Explainer) book, but with
-a hard law so a machine can play it for real.
+a hard law so a machine can play it.
 
 ## Why?
 
 I really like this ten hundred words idea. When I am trying to learn something new
-myself, or tell others. There is a fine line to walk. You can say the heart of the
+myself, or tell it to others. I find there is a fine line to walk. You have to say the heart of the
 thing with no big hard words. On the other side, you can cut away so much it is not
-quite true any more. I like to push myself to say things in an easy way, even in
-fields full of deep, hard ideas. I would push other people to do the same: start
-as easy as you can, and only add the hard parts when they really do help you see
-the thing more clearly. When you want to say something hard, and you find an easy
-way to say it: you really know the thing.
+quite true any more. 
+
+I push myself to say things in an easy way in
+fields full of deep, hard ideas. Start
+as easy as you can, and only add the hard parts when they help you see
+the thing clearly. When you want to say something hard, and you find an easy
+way to say it: I'd day you know the thing.
 
 ## Get it
 
