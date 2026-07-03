@@ -6,8 +6,7 @@ This work is a small thing on your computer that reads what you write. Every wor
 write has to be one of the ten hundred words that all people use most. If you use a
 big word it points at the word to change. You are not done until every word is one of the ten hundred.
 
-*(Every word up to here is one of the ten hundred — these first lines pass their
-own check.)* It is the same game as Randall Munroe's
+It is the same game as Randall Munroe's
 [*Thing Explainer*](https://en.wikipedia.org/wiki/Thing_Explainer) book, but with
 a hard law so a machine can play it.
 
