@@ -2,7 +2,7 @@
 
 You don't want an answer that makes you feel small. You want the easy, true one.
 
-This is a small thing on your computer that reads what you write. Every word you
+This work is a small thing on your computer that reads what you write. Every word you
 write has to be one of the ten hundred words that people use most. If you use a
 big word, it stops and points at the word to change. It will not tell you that
 you are done until every word is one of the ten hundred.
