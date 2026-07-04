@@ -1,12 +1,11 @@
 # thing-explainer
 
-You don't want an answer that makes you feel small. You want the easy, true one.
+If you don't want the hard answer, You want the easy but true one.
 
-This work is a small thing on your computer that reads what you write. Every word you
-write has to be one of the ten hundred words that all people use most. If you use a
-big word it points at the word to change. You are not done until every word is one of the ten hundred.
+This work is a thing that reads what you write. Every word has to be one of the ten hundred words that all people use most. If you do use a
+word not in it, this thing points at the word to change. It changes until every word left is one of the ten hundred words.
 
-It is the same game as Randall Munroe's
+It is the same as Randall Munroe's
 [*Thing Explainer*](https://en.wikipedia.org/wiki/Thing_Explainer) book, but with
 a hard law so a machine can play it.
 
@@ -14,13 +13,12 @@ a hard law so a machine can play it.
 
 I really like this ten hundred words idea. When I am trying to learn something new
 myself, or tell it to others. I find there is a fine line to walk. You have to say the heart of the
-thing with no big hard words. On the other side, you can cut away so much it is not
-quite true any more. Sometimes the big words are the best words.
+thing with no hard words. On the other side, you can cut away so much it is not
+quite true any more. Sometimes the best words are big.
 
-I push myself to say things in an easy way in
-fields full of deep, hard ideas. Start
-as easy as you can, and only add the hard parts when they help you see
-the thing clearly. When you want to say something hard, and you find an easy
+Still, I push myself to say things in an easy way in
+fields full of deep, hard ideas. Only add hard parts when they help people see
+the thing clearly. When you want to say something hard, but you find a good easy
 way to say it: I'd say you know the thing.
 
 ## Get it
