@@ -44,8 +44,8 @@ echo "The engine converts fuel into motion." | thing-explainer
 FIX: converts, fuel, motion
 ```
 
-(See how `engine` is fine: it really is one of the ten hundred. The words come
-from Munroe's own set, not made up.)
+(`engine` is fine: it is one of the ten hundred. The words come
+from Munroe's own set)
 
 ## Use it in your own Python
 
