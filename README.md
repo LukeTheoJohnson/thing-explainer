@@ -1,6 +1,6 @@
 # thing-explainer
 
-Sometimes you want the easy but true answer, not the hard one.
+I found a thing. Sometimes you want the true answer, but easy.
 
 This work is a thing that reads what you write. Every word has to be one of the ten hundred words that all people use most. If you do use a
 word not in it, this thing points at the word to change. It changes until every word left is one of the ten hundred words.
