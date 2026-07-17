@@ -1,6 +1,6 @@
 # thing-explainer
 
-I found a thing. Sometimes you want the true answer, but easy.
+Sometimes you want the true answer, but easy.
 
 This work is a thing that reads what you write. Every word has to be one of the ten hundred words that all people use most. If you do use a
 word not in it, this thing points at the word to change. It changes until every word left is one of the ten hundred words.
@@ -82,9 +82,6 @@ allowed to say you are done until it says so.
 
 ## A few that pass
 
-All three pass; every word in them is one of the ten hundred, checked against
-Munroe's own set.
-
 > **A flying machine** *(this is a plane; but the word "plane" is not one of the ten hundred!)*
 > A flying machine is a big metal bird that carries people through the sky. It
 > has long flat arms on each side. When it runs fast along the ground, air
@@ -93,7 +90,7 @@ Munroe's own set.
 > along. To come down, it slows and points its nose at the ground a little until
 > its feet touch and roll to a stop.
 
-> **A computer**
+> **A computer** (note "computer" is one of the words)
 > A computer is a box that does what you tell it, very fast. Inside is a tiny
 > part that thinks by doing lots of small bits of adding, one after another,
 > faster than you could ever count. It keeps things it needs to remember in
