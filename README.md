@@ -2,7 +2,7 @@
 
 Sometimes you want the true answer, but easy.
 
-There is a list of the ten hundred words that all people use most. This work is a thing that reads what you write and makes every word you write one of them.
+There is a list of the ten hundred words that all people use most. This work is a thing that reads what you write and changes every word to one of them.
 
 It is the same as Randall Munroe's
 [*Thing Explainer*](https://en.wikipedia.org/wiki/Thing_Explainer) book, but with
