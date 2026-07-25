@@ -2,8 +2,7 @@
 
 Sometimes you want the true answer, but easy.
 
-This work is a thing that reads what you write. Every word has to be one of the ten hundred words that all people use most. If you do use a
-word not in it, this thing points at the word to change. It changes until every word left is one of the ten hundred words.
+There is a list of the ten hundred words that all people use most. This work is a thing that reads what you write and makes every word you write one of them.
 
 It is the same as Randall Munroe's
 [*Thing Explainer*](https://en.wikipedia.org/wiki/Thing_Explainer) book, but with
