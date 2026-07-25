@@ -11,7 +11,7 @@ a hard law so a machine can play it.
 
 ## Why?
 
-I really like this ten hundred words idea. When I am trying to learn something new
+I really like this ten hundred words idea. Most people know them all, which helps when I am trying to learn something new
 myself, or tell it to others. I find there is a fine line to walk. You have to say the heart of the
 thing with no hard words. On the other side, you can cut away so much it is not
 quite true any more.
