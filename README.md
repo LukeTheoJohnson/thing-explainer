@@ -1,7 +1,5 @@
 # thing-explainer
 
-Sometimes you want the true answer, but easy.
-
 There is a list of the ten hundred words that all people use most. This work is a thing that reads what you write and changes every word to one of them.
 
 It is the same as Randall Munroe's
@@ -10,7 +8,9 @@ a hard law so a machine can play it.
 
 ## Why?
 
-I really like this ten hundred words idea. Most people know them all, which helps when I am trying to learn something new
+Sometimes you want the true answer, but easy.
+
+To say more: I really like this ten hundred words idea. Most people know them all, which helps when I am trying to learn something new
 myself, or tell it to others. I find there is a fine line to walk. You have to say the heart of the
 thing with no hard words. On the other side, you can cut away so much it is not
 quite true any more.
@@ -46,7 +46,7 @@ FIX: converts, fuel, motion
 (`engine` is fine: it is one of the ten hundred. The words come
 from Munroe's own set)
 
-## Use it in your own Python
+## Use it
 
 ```python
 from thing_explainer import check
@@ -121,9 +121,9 @@ pip install -e ".[dev]"
 python -m pytest                 # run all the checks
 ```
 
-## Big thank you
+## Thank you
 
-Everything good here is **[Randall Munroe](https://xkcd.com/)**'s: the man behind
+**[Randall Munroe](https://xkcd.com/)**'s: the man behind
 [xkcd](https://xkcd.com/), who once made machines that move on their own, at NASA.
 
 - **[*Up Goer Five*](https://xkcd.com/1133/)** (xkcd #1133, 2012): the drawing of
@@ -138,8 +138,6 @@ Everything good here is **[Randall Munroe](https://xkcd.com/)**'s: the man behin
   in your computer, that points out any word not in the ten hundred. This one is
   more or less that same thing but harder: it gives a hard number back, so a run
   that writes can not say it passed when it did not.
-
-If you like this, **buy the book**.
 
 **About the words:** [`wordlist.txt`](src/thing_explainer/wordlist.txt) is made
 from [`words.js`](src/thing_explainer/words.js), the very same words that come
