@@ -8,7 +8,7 @@ a hard law so a machine can play it.
 
 ## Why?
 
-Sometimes you want the true answer, but easy.
+Sometimes you still want the true answer, just easy.
 
 To say more: I really like this ten hundred words idea. Most people know them all, which helps when I am trying to learn something new
 myself, or tell it to others. I find there is a fine line to walk. You have to say the heart of the
